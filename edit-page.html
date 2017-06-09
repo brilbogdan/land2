@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+
+
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="js/charts/highcharts.js"></script>
+    <script src="js/charts/modules/exporting.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+
+<!---------------HEADER--------------------------------------------->
+
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+<!---------------CONTENT--------------------------------------------->
+
+<section class="b-main-section">
+
+    <div class="container">
+        <h1 class="ttl-page">Редактирование профиля</h1>
+
+        <form class="clearfix b-form-edit-profile" id="profileForm" method="post" action="?user=advert&page=profile">
+            <div class="row clearfix">
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label class="el-label-form">
+                        E-mail:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input type="text" value="adv@test.ru" disabled />
+                    </div>
+                    <div class="el-form-wrapper__txt"></div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label class="el-label-form">
+                        Balance:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input type="text" value="522.0300" disabled />
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label for="pass" class="el-label-form">
+                        Password <span>*</span>:
+                    </label>
+
+                    <div class="wrapper-select">
+                        <input name="pass" id="pass" type="password" value="" />
+                    </div>
+                    <div class="el-form-wrapper__txt">
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label for="pass2" class="el-label-form">
+                        Confirm Password  <span>*</span>:
+                    </label>
+
+                    <div class="wrapper-select">
+                        <input name="pass2" id="pass2" type="password" value="" />
+                    </div>
+                    <div class="el-form-wrapper__txt">
+
+                    </div>
+                </div>
+
+
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label for="icq" class="el-label-form">
+                        ICQ:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="icq" id="icq" type="text" maxlength="9" value="" placeholder="123123">
+                    </div>
+                    <div class="el-form-wrapper__txt">
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label for="skype" class="el-label-form">
+                        Skype:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="skype" id="skype" type="text" maxlength="30" value="" placeholder="">
+                    </div>
+                    <div class="el-form-wrapper__txt">
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox col-md-12">
+
+                    <div class="b-wrapper-column-checkbox clearfix">
+                        <div class="b-line-wrapper-checkbox">
+                            <input type="checkbox" name="approve_mail" id="approve_mail" class="adv_ch"  value="1" checked>
+                            <label for="approve_mail" class="none">
+                                <span>Почтовые уведомления</span>
+                            </label>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="b-form-text-line col-md-12">
+                    <p><span class="">*</span> - Обязательные к заполнению поля</p>
+                </div>
+
+
+                <div class="b-form-captcha col-md-12">
+                    <div class="b-form-captcha__wrapper">
+                        <div class="b-form-captcha__ttl">
+                            <b>Код безопасности <span>*</span>:</b>
+                        </div>
+                        <div class="b-form-captcha__image">
+                            <img src="http://adforce.team/captcha/?mode=2" alt="">
+                        </div>
+                        <div class="b-form-captcha__footer clearfix">
+                            <div class="wrapper-input">
+                                <input type="text" name="captcha" id="keystring">
+                            </div>
+                            <input name="contactus" type="submit" class="signup btn-submit-form" id="contactus" value="Готово" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!---------------FOOTER--------------------------------------------->
+
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png" alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive" >
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                         © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+            
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+.bootstrap-select{
+    .dropdown-menu{
+        display: none;
+        position: absolute;
+        background-color: white;
+        top: 52px;
+        box-shadow: 0 5px 16px rgba(216, 214, 214, 0.75);
+        border-radius: 4px 5px 5px 4px;
+        z-index: 45;
+        max-height: 500px !important;
+        li{
+            transition: 0.3s;
+            height: 54px;
+            a{
+                &:focus{
+                    outline: none;
+                }
+            }
+            &:hover,
+            &.selected{
+                background-color: #a7c1e9;
+                a{
+                    span{
+                        color: white !important;
+                    }
+                }
+            }
+
+        }
+    }
+    &.open{
+        .dropdown-menu{
+            display: block;
+        }
+    }
+}

@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+
+
+<!---------------HEADER--------------------------------------------->
+
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+<!---------------CONTENT--------------------------------------------->
+
+<section class="b-main-section b-add-page">
+
+    <div class="container">
+        <h1 class="ttl-page">Пополнение:</h1>
+
+        <form method="POST" action="?user=advert&page=payment_system" onsubmit="if(document.getElementById('sum').value < 1500) {alert('Минимальная сумма пополнения 1500 руб.'); return false;}" class="clearfix">
+            <div class="row clearfix">
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label class="el-label-form" for="sum">
+                        Сумма <span>*</span> :
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input type="text"   name="sum"  id="sum"  value="1500" onkeyup="calc_wmz()" maxlength="10">
+                        <input type="hidden" name="id"   id="id"   value="4321883">
+                        <input type="hidden" name="desc" id="desc" value="AdForce, charge balance for adv@test.ru">
+                    </div>
+                    <div class="el-form-wrapper__txt"></div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox col-md-12">
+
+                    <div class="el-label-form">
+                    </div>
+
+                    <div class="b-column-radio col-md-5">
+
+                        <div class="b-column-radio">
+                            <input type="radio" name="ps" id="ps_wmr" value="wmr" checked>
+                            <label for="ps_wmr">
+                                <span>Webmoney WMR</span>
+                            </label>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox col-md-12">
+                    <div class="el-label-form">
+                    </div>
+
+                    <div class="b-column-radio col-md-5">
+                        <div class="b-column-radio">
+                            <input type="radio" name="ps" id="ps_wmz" value="wmz">
+                            <label for="ps_wmz">
+                                <span>Webmoney WMZ ( <b id="wmz_summ"></b> WMZ по курсу 58.8256992 )</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox col-md-12">
+                    <div class="el-label-form">
+                    </div>
+
+                    <div class="b-column-radio col-md-5">
+                        <div class="b-column-radio">
+                            <input type="radio" name="ps" id="ps_paysto" value="paysto">
+                            <label for="ps_paysto">
+                                <span><b class="red">**</b>Visa, Master Card, Qiwi, Яндекс.Деньги и т.д.</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+                    <div class="el-label-form">
+                    </div>
+                    <input type="submit" class="signup btn-submit-form btn-submit__fixed" id="contactus" value="Пополнить">
+                </div>
+
+
+                <div class="b-form-wrapper-line col-md-12">
+                    <div class="el-form-wrapper__txt">
+                        <p><span class="red">*</span> - Минимальная сумма пополнения 1500 руб.</p>
+                        <p><span class="red">**</span> - Взимается дополнительная комиссия платежной системы в размере 5% от суммы платежа.</p>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!---------------FOOTER--------------------------------------------->
+
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png" alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive" >
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                    © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!---------------SCRIPT--------------------------------------------->
+<script type="text/javascript">
+    function calc_wmz() {
+        wmr_value = document.getElementById("sum").value;
+        if (wmr_value.indexOf(",") != -1) {
+            wmr_value = wmr_value.split(",").join(".");
+            document.getElementById("sum").value = wmr_value;
+        }
+        wmz_value = Math.ceil(wmr_value * 100 / 58.8256992) / 100;
+        document.getElementById("wmz_summ").innerHTML = wmz_value;
+    }
+    calc_wmz();
+</script>
+
+</body>
+</html>

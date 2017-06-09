@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/datepicker.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+
+
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/datepicker-ru.js"></script>
+    <script src="js/charts/highcharts.js"></script>
+    <script src="js/charts/modules/exporting.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<!---------------HEADER--------------------------------------------->
+
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+<!---------------CONTENT--------------------------------------------->
+
+<section class="b-main-section b-page-chart clearfix">
+
+    <div class="container clearfix">
+        <h1 class="ttl-page">Статистика по дням:</h1>
+
+        <form name="site_select" method="post" action="?user=advert&page=clickunder&action=day_stat" class="clearfix">
+
+            <div class="b-form-wrapper-line b-form-wrapper-chart-line">
+                <div class="wrapper-select">
+                    <select size="1" name="site" onchange="document.forms.site_select.submit();">
+                        <option value="0">Все</option>
+                        <option value="436">test_categ</option>
+                        <option value="82">device</option>
+                        <option value="50">browser</option>
+                        <option value="38">price</option>
+                        <option value="37">test-1</option>
+                        <option value="35">GEO</option>
+                        <option value="34">test</option>
+                    </select>
+                </div>
+            </div>
+
+
+            <div class="col-md-12">
+                <div class="row">
+                    <div id="chart_container"></div>
+                </div>
+            </div>
+
+            <div class="b-form-wrapper-line b-form-wrapper-checkbox b-form-wrapper-checkbox__type-2 col-md-12">
+
+
+                <div class="b-wrapper-column-checkbox b-wrapper-column-checkbox__type-2 clearfix">
+                    <div class="b-column-radio b-column-radio__type-2">
+                        <div class="b-line-wrapper-checkbox__radio">
+                            <input name="tariff_type" type="radio" class="adv_ch" id="radio_1" value="1" checked/>
+                            <label for="radio_1" class="none"><span>Показы</span></label>
+                        </div>
+                    </div>
+
+                    <div class="b-column-radio b-column-radio__type-2">
+                        <div class="b-line-wrapper-checkbox__radio">
+                            <input name="tariff_type" id="radio_2" type="radio" class="adv_ch" value="2"/>
+                            <label for="radio_2" class="none"><span>Клики</span></label>
+                        </div>
+                    </div>
+
+                    <div class="b-column-radio b-column-radio__type-2">
+                        <div class="b-line-wrapper-checkbox__radio">
+                            <input name="tariff_type" id="radio_3" type="radio" class="adv_ch" value="3"/>
+                            <label for="radio_3" class="none"><span>Лиды</span></label>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="b-form-wrapper-line b-form-wrapper-datepicker col-md-12">
+                <div class="wrapper-input">
+                    <input type="text" class="d_p" name="start_date">
+                </div>
+                <div class="el-datepicker-line">
+                </div>
+                <div class="wrapper-input">
+                    <input type="text" class="d_p" name="end_date">
+                </div>
+                <div class="wrapper-input">
+                    <input type="submit" class="signup" value="Выбрать">
+                </div>
+            </div>
+
+        </form>
+
+        <div class="wrapper-scroll-info">
+            <div class="el-scroll-info">
+
+            </div>
+        </div>
+
+        <div class="wrapper-table fll">
+            <table cellpadding="3" cellspacing="2" border="0" align="center" class="b-table b-table__statistic">
+                <thead>
+                    <tr class="b-table__header">
+                        <th><div>Дата</div></th>
+                        <th><div>Показы</div></th>
+                        <th><div>Клики</div></th>
+                        <th><div>CTR</div></th>
+                        <th><div>Лиды</div></th>
+                        <th><div>Затраты</div></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>22.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>23.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>24.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>25.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>26.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>27.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>28.02.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>01.03.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>02.03.2017</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>-</td>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                </tbody>
+                <thead>
+                    <tr class="b-table__footer">
+                    <td><div>Итого:</div></td>
+                    <td><div>0</div></td>
+                    <td><div>0</div></td>
+                    <td><div>-</div></td>
+                    <td><div>0</div></td>
+                    <td><div>0</div></td>
+                </tr>
+                </thead>
+
+            </table>
+        </div>
+
+
+    </div>
+
+
+</section>
+
+<!---------------FOOTER--------------------------------------------->
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png"
+                         alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive">
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                    © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!---------------SCRIPT----PAGE----------------------------------------->
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".d_p").datepicker();
+    });
+    $(function () {
+        $('#chart_container').highcharts({
+            chart: {
+                type: 'areaspline',
+                backgroundColor: '#eeeeee'
+            },
+            title: {
+                text: 'ClickUnder'
+            },
+            xAxis: {
+                categories: ['01.03', '02.03', '03.03']
+            },
+            yAxis: {
+                title: {
+                    text: ''
+                }
+            },
+            tooltip: {
+                shared: true,
+                valueSuffix: ''
+            },
+            credits: {
+                enabled: false
+            },
+            plotOptions: {
+                areaspline: {
+                    fillOpacity: 0.5
+                },
+                series: {
+                    color: '#435c83'
+
+                }
+
+            },
+            series: [{
+                name: 'Переходы',
+                data: [30, 150, 300],
+                allowPointSelect: true,
+                marker: {
+
+                    fillColor: '#e7e8eb',
+                    lineWidth: 3,
+                    lineColor: '#a7c1e9',
+                    radius: 6,
+                    states: {}
+                }
+            }],
+            exporting: {
+                buttons: {
+                    contextButton: {
+                        align: 'center',
+                        x: 80,
+                        y: -4
+
+                    }
+                }
+            },
+            navigation: {
+                buttonOptions: {
+                    theme: {
+
+                        states: {
+                            hover: {
+                                fill: '#a4edba',
+                                cursor:'pointer'
+                            },
+                            select: {
+                                stroke: '#039'
+//                                fill: '#a4edba'
+                            }
+                        }
+                    }
+                }
+            }
+        });
+    });
+</script>
+</body>
+</html>

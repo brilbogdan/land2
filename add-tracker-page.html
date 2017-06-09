@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+
+<!---------------HEADER--------------------------------------------->
+
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+<!---------------CONTENT--------------------------------------------->
+
+<section class="b-main-section">
+
+    <div class="container">
+        <h1 class="ttl-page">Добавление:</h1>
+
+        <form class="clearfix" id="TrackerForm" method="post" action="?user=advert&page=tracker&action=add">
+            <div class="row clearfix">
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label class="el-label-form" for="name">
+                        Название <span>*</span> :
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="name" id="name" type="text" maxlength="30" value=""  />
+                    </div>
+                    <div class="el-form-wrapper__txt"></div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label for="type" class="el-label-form">
+                        Тип <span>*</span> :
+                    </label>
+
+                    <div class="wrapper-select">
+                        <select name="type" id="type" onchange='if (this.value == 1) { document.getElementById("pixel_option").style.display = ""; document.getElementById("posturl_option").style.display = "none"; } else { document.getElementById("pixel_option").style.display = "none"; document.getElementById("posturl_option").style.display = ""; }'>
+                            <option value="1">Пиксель</option>
+                            <option value="2">Post URL</option>
+                        </select>
+                    </div>
+                    <div class="el-form-wrapper__txt">
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12" id="pixel_option" style="display:">
+
+                    <label for="post_click" class="el-label-form">
+                        Post Click <span>*</span> :
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="post_click" id="post_click" type="text" maxlength="3" value="" />
+                    </div>
+                    <div class="el-form-wrapper__txt"></div>
+
+                </div>
+
+                <div class="row">
+                    <div id="posturl_option" style="display: none" class="fll col-xs-12">
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="agregator" class="el-label-form">
+                                Агрегатор:
+                            </label>
+
+                            <div class="wrapper-select">
+                                <select name="agregator" id="agregator" onchange='select_agregator_1(this.value)'>
+                                    <option value="0" selected>Отсутствует</option>
+                                    <option value="1">Admitad.com</option>
+                                    <option value="2">Actionpay.ru</option>
+                                    <option value="3">Ad1.ru</option>
+                                    <option value="4">Unileadnetwork.com</option>
+                                    <option value="5">Actionads.ru</option>
+                                </select>
+                            </div>
+                            <div class="el-form-wrapper__txt">
+
+                            </div>
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="time1" class="el-label-form">
+                                Время клика:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="time1" id="time1" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="time2" class="el-label-form">
+                                Время действия:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="time2" id="time2" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="track" class="el-label-form">
+                                Макрос {{track}} <span>*</span> :
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="track" id="track" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="currency" class="el-label-form">
+                                Валюта:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="currency" id="currency" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="sum" class="el-label-form">
+                                Прибыль:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="currency" id="sum" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="action" class="el-label-form">
+                                Идентификатор действия:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="action" id="action" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="ip" class="el-label-form">
+                                IP:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="ip" id="ip" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <label for="user_agent" class="el-label-form">
+                                User agent:
+                            </label>
+
+                            <div class="wrapper-input">
+                                <input name="user_agent" id="user_agent" type="text" maxlength="15" value="" />
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12">
+
+                            <div class="el-label-form">
+
+                            </div>
+
+                            <div class="wrapper-input">
+                                <div class="b-line-wrapper-checkbox">
+                                    <input name="cb_if" id="cb_if" class="check" type="checkbox" value="1" onclick="if (this.checked != true) { document.getElementById('tr_if').style.display='none'; } else { document.getElementById('tr_if').style.display=''; }">
+                                    <label for="cb_if" class="none">
+                                        <span>Добавить условие:</span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                        <div class="b-form-wrapper-line col-md-12" id="tr_if" style="display:none;">
+
+                            <label for="if_p" class="el-label-form">
+                                Принимать данные при условии, что
+                            </label>
+
+                            <div class="wrapper-input">
+                                <div class="wrapper-input__type-2">
+                                    <input type="text" maxlength="15" name="if_p" id="if_p" placeholder="Параметр" value="">
+                                </div>
+
+                                <div class="el-select-time__txt">
+                                    =
+                                </div>
+
+                                <div class="wrapper-input__type-2">
+                                    <input type="text" maxlength="15" name="if_v" id="if_v" placeholder="Значение" value="">
+                                </div>
+
+                            </div>
+
+                            <div class="el-form-wrapper__txt"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12">
+
+                    <label for="comment" class="el-label-form">
+                        Комментарии:
+                    </label>
+
+                    <div class="wrapper-textarea">
+                        <textarea cols="25" rows="5" name="comment" id="comment"></textarea>
+                    </div>
+
+                    <div class="el-form-wrapper__txt"></div>
+
+                </div>
+
+
+
+
+                <div class="b-form-text-line col-md-12">
+                    <p><span class="">*</span> - Обязательные к заполнению поля</p>
+                </div>
+
+
+                <div class="b-form-captcha col-md-12">
+                    <div class="b-form-captcha__wrapper">
+                        <div class="b-form-captcha__ttl">
+                            <b>Код безопасности <span>*</span>:</b>
+                        </div>
+                        <div class="b-form-captcha__image">
+                            <img src="http://adforce.team/captcha/?mode=2" alt="">
+                        </div>
+                        <div class="b-form-captcha__footer clearfix">
+                            <div class="wrapper-input">
+                                <input type="text" name="captcha" id="keystring">
+                            </div>
+                            <input name="contactus" type="submit" class="signup btn-submit-form" id="contactus" value="Готово" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!---------------FOOTER--------------------------------------------->
+
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png" alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive" >
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                    © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

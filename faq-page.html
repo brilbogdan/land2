@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/common.js"></script>
+</head>
+<body>
+<!---------------HEADER--------------------------------------------->
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+<!---------------CONTENT--------------------------------------------->
+<section class="b-main-section">
+
+    <div class="container clearfix">
+
+        <h1 class="ttl-page tac">Часто задаваемые вопросы</h1>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Можно ли на одну почту открыть кабинеты для рекламодателя и вебмастера?</a>
+            <div class="el-faq-answer">
+                <p>Нет. Для каждого кабинета необходима отдельная почта.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Как внести деньги на баланс нашей системы?</a>
+            <div class="el-faq-answer">
+                <p>
+                    На данный момент внести деньги на баланс нашей системы Вы можете в разделе <a href="?user=advert&page=finance" target="_blank">"Финансы"</a>, нажав на кнопку <a href="?user=advert&page=charge" target="_blank">"Пополнить"</a>. Далее нужно указать сумму пополнения. Минимальная сумма пополнения составляет 1500 рублей.
+                </p>
+                <p>После этого необходимо выбрать способ оплаты:</p>
+                <ul>
+                    <li>Webmoney</li>
+                    <li>Visa, Master Card, Qiwi, Яндекс Деньги и т.д</li>
+                </ul>
+                <p>Выбрав Webmoney, Вы перейдете в webmoney transfer, где после указания необходимых данных, пополните баланс.</p>
+                <p>Выбрав Visa, Master Card, Qiwi, Яндекс Деньги и нажав на кнопку "Пополнить", Вы будете перенаправлены на сервис для организации приема платежей "Робокасса", где сможете выбрать удобный для Вас вариант оплаты и пройдя все указанные шаги, пополните Ваш баланс.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Как вернуть неиспользованные средства?</a>
+            <div class="el-faq-answer">
+                <p>Возврат неиспользованных средств осуществляется только при пополнении через платежную систему Webmoney, и на те же реквизиты, с которых была оплачена услуга. Более детальную информацию по возврату средств Вы можете найти на странице
+                    <a href="?page=rules" target="_blank">правил</a> пункт 4.3.5. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Принимается ли оплата в других валютах кроме рубля?</a>
+            <div class="el-faq-answer">
+                <p>Да, принимается, но за подробностями нужно обратиться в службу поддержки.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">В какой валюте идет взаиморасчет по статистике?</a>
+            <div class="el-faq-answer">
+                <p>В рублях.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Как часто обновляется статистика?</a>
+            <div class="el-faq-answer">
+                <p>Статистика обновляется каждые 5 минут.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Какие форматы промоматериалов принимаются в систему? </a>
+            <div class="el-faq-answer">
+                <p>Принимаются только форматы jpg, png, gif или swf. Просим обратить внимание, что для swf баннеров в качестве ссылки для перехода нужно использовать flashvars link1, иначе рекламные объявления с такими баннерами не пройдут модерацию. Для баннера Layer (размер 800х600) используется отдельный скрипт, для получения которого обратитесь в службу поддержки.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Что такое Альтернативный баннер?</a>
+            <div class="el-faq-answer">
+                <p>При создании рекламного объявления указываются 2 файла: Баннер (основной) и Альтернативный баннер. Альтернативный будет отображаться тогда, когда основной не может быть отображен (например, если у пользователя отключен Flash Player в браузере при использовании swf баннера).</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Почему мое объявление не прошло модерацию? </a>
+            <div class="el-faq-answer">
+                <p>В нашей сети не принимаются баннера (графические промо материалы) с фотографиями болезней, изображениями частей тела людей с сильно избыточным весом, а также баннера с явно выраженным эротическим содержанием и кадрами из фильмов ужасов.
+                    Так же все баннера должны быть проверенны нашими художниками на наличие сторонних, не нужных для работы в нашей сети скриптов.
+                    Мы оставляем за собой право заблокировать любое рекламное объявление без объяснения причин и оповещения рекламодателя.
+                    По любому вопросу касательно модерации, настоятельно рекомендуем обращаться в службу поддержки.</p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Зачем в баннерах описание?</a>
+            <div class="el-faq-answer">
+                <p>Блок «Описание» при создании кампании для iMessage служит для редактирования текстовой составляющей объявления, которая будет впоследствии видна пользователям. Обращаем Ваше внимание на то, что для баннеров, текст, введенный в данное поле, для пользователей виден НЕ будет! Он будет виден только Вам в личном кабинете в нашей системе. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Что такое СМС объявление?</a>
+            <div class="el-faq-answer">
+                <p>Это рекламное объявление "платников", на которых посетителю необходимо ввести свой номер телефона (впоследствии на него будет оформлена смс-подписка), или же отправь смс на платный номер. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Какие доступны таргетинги при настройке объявлений?</a>
+            <div class="el-faq-answer">
+                <p>При настройке объявлений доступны таргетинги по: Гео, времени, браузерам, устройствам, времени уникальности, по тематикам сайтов и ретаргетинг. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Что такое время уникальности?</a>
+            <div class="el-faq-answer">
+                <p>Вы можете выставить суточные ограничения по кликам, показам или по выполненным действиям.  </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Что такое Tracker? </a>
+            <div class="el-faq-answer">
+                <p>Tracker — это программная единица в нашей системе, способная принимать сообщения о конверсиях (лидах) от учетного пикселя, созданного в нашей системе, и отображать эти данные в статистике. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Что такое учетный пиксель?</a>
+            <div class="el-faq-answer">
+                <p>Это инструмент, при помощи которого можно считать количество целевых действий (лидов). Для того чтобы его создать, необходимо в разделе Tracker создать учетный пиксель, и разместить полученный код на странице совершенного действия. Далее, при настройке кампании, в соответствующем списке (Tracker) нужно выбрать подходящий пиксель.</p>
+                <p>
+                    С помощью данного инструмента Вы сможете считать конверсии по тем или иным рекламным объявлениям и измерять их результативность.
+                </p>
+            </div>
+        </div>
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Какие есть формы оплаты?</a>
+            <div class="el-faq-answer">
+                <p>В данный момент есть только 2 формы оплаты: CPC (за клики) и CPM (за показы). </p>
+            </div>
+        </div>
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Какие минимальные ставки в системе? </a>
+            <div class="el-faq-answer">
+                <p>У нас нет минимальных ставок, Вы можете поставить любую ставку в нашей системе.</p>
+                <p>Так как в нашей системе действует аукционный принцип ротации рекламных объявлений, в зависимости от поставленной Вами ставки, а так же CTR Вашего объявления будет рассчитан CPM ранжирования Вашего объявления для каждой площадки, в соответствии с которым Ваше объявление получит то или иное место в ротации на той или иной площадке.</p>
+                <p>Именно от этого будет зависеть сколько и главное какой трафик Вы будете получать. Так как Ваше объявление может крутиться в низком приоритете из-за низкого CPM ранжирования на некоторых площадках, а на других может не крутиться вовсе! </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Почему мои объявления получают так мало трафика?</a>
+            <div class="el-faq-answer">
+                <p>Потому что CPM ранжирования Ваших объявлений ниже, чем у конкурирующих объявлений других рекламодателей на тех же площадках. Измените объявление для увеличения CTR, либо увеличьте цену. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Что такое Retargeting?</a>
+            <div class="el-faq-answer">
+                <p>Это инструмент, при помощи которого можно повторно показывать объявления только тем посетителям, которые уже видели страницу рекламируемого товара или услуги. Для того чтобы его настроить, необходимо в разделе Retargeting создать ретаргетинг пиксель, и разместить полученный код в исходном коде страницы товара или услуги. </p>
+                <p>Далее, при настройке кампании, в соответствующем списке нужно выбрать подходящий пиксель. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Есть ли у Вас White List?</a>
+            <div class="el-faq-answer">
+                <p>Нет. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Есть ли у Вас Black List?</a>
+            <div class="el-faq-answer">
+                <p>Да.  </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Как мне занести площадки в Black List?</a>
+            <div class="el-faq-answer">
+                <p>Для того чтобы занести некоторые площадки в блэк лист, Вы должны собрать список id площадок, которые Вы хотите занести в black list, и передать их менеджеру службы поддержки, при этом указав для каких объявлений данный список занести в black list. </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">У меня нет своих баннеров, что мне делать?</a>
+            <div class="el-faq-answer">
+                <p>При пополнении на сумму от 5000 руб, наши высококвалифицированные художники могут сделать исключительно для Вас баннер на все наши размеры, исходя из рекламируемого продукта и Ваших личных пожеланий. </p>
+                <p>Для того, чтобы сделать заказ баннеров необходимо обратиться в службу поддержки рекламодателей, и передать менеджеру дословный заказ, в котором будет обязательно указано:</p>
+                <ul>
+                    <li>посадочная страница, на которую будет попадать пользователь после клика по баннеру;</li>
+                    <li>список наших размеров, для которых нужен баннер: 500х250, 240х400, 120х600, 628х90;</li>
+                    <li>точные и детальные пожелания по поводу содержания баннера, желательно детальное ТЗ с примерами подобной реализации, или как минимум просим указать тип баннера: информативность (максимум текста о товаре или услуге, взаимодействие с пользователем только с помощью кнопки «Играть» или «Купить» - средний CTR, но высокая тематичность) либо интерактивность (максимум взаимодействия с пользователем посредством внутрибаннерной механики — высокий CTR, но несет минимум информации о товаре/услуге).</li>
+                </ul>
+                <p><b>ВНИМАНИЕ!</b> Все что <b>НЕ</b> будет детально оговорено в заказе баннера, наши художники реализуют <b>НА СВОЕ УСМОТРЕНИЕ</b> исходя из своего опыта и посадочной страницы. </p>
+                <p>
+                    После реализации первичного варианта баннера, менеджер поддержки Вам его предоставит для правок и исправлений. <b>ПРОСИМ УЧЕСТЬ</b>, что после реализации первичного варианта баннера полностью он переделываться <b>НЕ</b> будет, для этого и нужно детальное <b>ТЗ</b> в самом начале заказа.
+                </p>
+                <p>
+                    Так же хотим обратить Ваше внимание на то, что создание баннеров возможно только в том, случае, если Вы потратили или собираетесь потратить на рекламу в нашей сети не менее 5000 руб.
+                </p>
+            </div>
+        </div>
+
+        <div class="col-xs-12 b-line-faq">
+
+            <a href="#" class="el-link-slide el-faq-question">Я не нашел ответ на свой вопрос на этой странице, что мне делать?</a>
+            <div class="el-faq-answer">
+                <p>Обратитесь к менеджеру <a href="?page=contacts">службы поддержки</a> Рекламодателей (только в будни дни с 9:00 до 18:00 по МСК) </p>
+                <p>Они всегда будут рады помочь Вам!</p>
+
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<!---------------FOOTER--------------------------------------------->
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png" alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive" >
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                         © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+            
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+
+<!---------------SCRIPT--------------------------------------------->
+<script type="text/javascript">
+    function setChecked(obj) {
+        var str = document.getElementById("ch_text").innerHTML;
+        str = (str == "Отметить" ? "Снять" : "Отметить");
+        document.getElementById("ch_text").innerHTML = str;
+
+        var check = document.getElementsByName("cat_ch[]");
+        for (var i=0; i<check.length; i++) {
+            check[i].checked = obj.checked;
+        }
+    }
+
+    function setPrior(obj) {
+        for (i = 0; i < document.forms.clickUnderForm.elements.length; i++) {
+            if (document.forms.clickUnderForm.elements[i].name.indexOf("prior") == 0) {
+                document.forms.clickUnderForm.elements[i].value = obj.value;
+            }
+        }
+    }
+</script>
+
+<!---------------HEADER--------------------------------------------->
+
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+<!---------------CONTENT--------------------------------------------->
+
+<section class="b-main-section b-add-bl-page">
+
+    <div class="container">
+        <h1 class="ttl-page">Добавление:</h1>
+
+        <form class="clearfix" id="clickUnderForm" method="post" action="?user=advert&page=clickunder&action=add">
+            <div class="row clearfix">
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label class="el-label-form" for="name">
+                        Название <span>*</span> :
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="name" id="name" type="text" maxlength="30" value=""  />
+                    </div>
+                    <div class="el-form-wrapper__txt"></div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label class="el-label-form" for="url">
+                        URL <span>*</span> :
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input type="text" name="url" id="url" maxlength="250" value="" placeholder="http://"/>
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                        {{subid}} заменяется на ID площадки,<br/> {{theme}} заменяется на название тематики площадки
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label for="tracker" class="el-label-form">
+                        Tracker:
+                    </label>
+
+                    <div class="wrapper-select">
+                        <select id="tracker" name="tracker" size="1" onchange="if (this.value != 0) { disp=''; } else { disp='none'; } document.getElementById('day_leads_limit_option').style.display = disp;">
+                            <option value="0">Отсутствует</option>
+                            <option value="1">Присутствует</option>
+                        </select>
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label for="retargeting" class="el-label-form">
+                        Retargeting:
+                    </label>
+
+                    <div class="wrapper-select">
+                        <select id="retargeting" name="retargeting" size="1">
+                            <option value="0">Отсутствует</option>
+                            <option value="1">Присутствует</option>
+                        </select>
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                    </div>
+                </div>
+
+
+                <div class="b-form-wrapper-line col-md-12 clearfix" id="day_leads_limit_option">
+
+                    <label for="day_leads_limit">
+                        Лимит лидов:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="day_leads_limit" id="day_leads_limit" type="text" maxlength="5" value="" />
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                        0 - Без ограничений
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label for="day_limit" class="el-label-form">
+                        Лимит переходов:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="day_limit" id="day_limit" type="text" maxlength="7" value="" />
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                        0 - Без ограничений
+                    </div>
+                </div>
+
+
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label for="start_time" class="el-label-form">
+                        Время:
+                    </label>
+
+                    <div class="wrapper-select b-form-select-time">
+                        <div class="wrapper-select">
+                            <select id="start_time" name="start_time" size="1" style="width: 60px;">
+                                <option value="0" >00</option>
+                                <option value="1" >01</option>
+                                <option value="2" >02</option>
+                                <option value="3" >03</option>
+                                <option value="4" >04</option>
+                                <option value="5" >05</option>
+                                <option value="6" >06</option>
+                                <option value="7" >07</option>
+                                <option value="8" >08</option>
+                                <option value="9" >09</option>
+                                <option value="10" >10</option>
+                                <option value="11" >11</option>
+                                <option value="12" >12</option>
+                                <option value="13" >13</option>
+                                <option value="14" >14</option>
+                                <option value="15" >15</option>
+                                <option value="16" >16</option>
+                                <option value="17" >17</option>
+                                <option value="18" >18</option>
+                                <option value="19" >19</option>
+                                <option value="20" >20</option>
+                                <option value="21" >21</option>
+                                <option value="22" >22</option>
+                                <option value="23" >23</option>
+                            </select>
+                        </div>
+
+                        <div class="el-select-time__txt">
+                            —
+                        </div>
+
+                        <div class="wrapper-select">
+                            <select id="end_time" name="start_time" size="1" style="width: 60px;">
+                                <option value="0" >00</option>
+                                <option value="1" >01</option>
+                                <option value="2" >02</option>
+                                <option value="3" >03</option>
+                                <option value="4" >04</option>
+                                <option value="5" >05</option>
+                                <option value="6" >06</option>
+                                <option value="7" >07</option>
+                                <option value="8" >08</option>
+                                <option value="9" >09</option>
+                                <option value="10" >10</option>
+                                <option value="11" >11</option>
+                                <option value="12" >12</option>
+                                <option value="13" >13</option>
+                                <option value="14" >14</option>
+                                <option value="15" >15</option>
+                                <option value="16" >16</option>
+                                <option value="17" >17</option>
+                                <option value="18" >18</option>
+                                <option value="19" >19</option>
+                                <option value="20" >20</option>
+                                <option value="21" >21</option>
+                                <option value="22" >22</option>
+                                <option value="23" >23</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox b-form-geo col-md-12 clearfix">
+
+                    <label for="geo" class="el-label-form">
+                        Гео <span>*</span>
+                    </label>
+
+                    <div class="b-wrapper-column-checkbox clearfix">
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-column-checkbox__ttl">
+                                <span class="icon ic-russia"></span>
+                                Россия
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="RU_Moscow" value="RU:Moscow">
+                                <label for="RU_Moscow" class="none">
+                                    <span>Москва</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="RU_Saint Petersburg" value="RU:Saint Petersburg">
+                                <label for="RU_Saint Petersburg" class="none">
+                                    <span>Санкт-Петербург</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="RU_all_cities" value="RU:">
+                                <label for="RU_all_cities" class="none">
+                                    <span>Все города</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-column-checkbox__ttl">
+                                <span class="icon ic-ukraine"></span>
+                                Украина
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="UA_Kiev" value="UA:Kiev">
+                                <label for="UA_Kiev" class="none">
+                                    <span>Киев</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="UA_all_cities" value="UA:">
+                                <label for="UA_all_cities" class="none">
+                                    <span>Все города</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-column-checkbox__ttl">
+                                <span class="icon ic-kazah"></span>
+                                Казахстан
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="KZ_all_cities" value="KZ:">
+                                <label for="KZ_all_cities" class="none">
+                                    <span>Все города</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-column-checkbox__ttl">
+                                <span class="icon ic-belarus"></span>
+                                Беларуссия
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="BY_all_cities" value="BY:">
+                                <label for="BY_all_cities" class="none">
+                                    <span>Все города</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 b-column-checkbox b-column-checkbox-total">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="geo[]" id="all_countries" value=":">
+                                <label for="all_countries" class="none">
+                                    <span>Все страны</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line col-md-12 clearfix">
+
+                    <label for="hold_time" class="el-label-form">
+                        Уникальность:
+                    </label>
+
+                    <div class="wrapper-input">
+                        <input name="hold_time" id="hold_time" type="text" maxlength="3" value="" />
+                    </div>
+                    <div class="el-form-wrapper__txt">
+                        Выкупать того же посетителя не чаще, чем раз в ... часов
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox col-md-12 clearfix">
+
+                    <label for="browsers" class="el-label-form">
+                        Браузеры <span>*</span>
+                    </label>
+
+                    <div class="b-wrapper-column-checkbox clearfix">
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_1">
+                                <label for="br_1" class="none">
+                                    <span>Mozilla Firefox</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_2">
+                                <label for="br_2" class="none">
+                                    <span>Яндекс браузер</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_3">
+                                <label for="br_3" class="none">
+                                    <span>Google Chrome</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_4">
+                                <label for="br_4" class="none">
+                                    <span>Internet Explorer</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_5">
+                                <label for="br_5" class="none">
+                                    <span>Opera</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_6">
+                                <label for="br_6" class="none">
+                                    <span>Apple Safari</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="browsers[]" value="1" class="adv_ch" id="br_other">
+                                <label for="br_other" class="none">
+                                    <span>Другие</span>
+                                </label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox col-md-12 clearfix">
+
+                    <label for="devices" class="el-label-form">
+                        Устройства <span>*</span>
+                    </label>
+
+                    <div class="b-wrapper-column-checkbox clearfix">
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="devices[]" value="1" class="adv_ch" id="de_1">
+                                <label for="de_1" class="none">
+                                    <span>Стационарные</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="devices[]" value="1" class="adv_ch" id="de_2">
+                                <label for="de_2" class="none">
+                                    <span>Android</span>
+                                </label>
+                            </div>
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="devices[]" value="1" class="adv_ch" id="de_3">
+                                <label for="de_3" class="none">
+                                    <span>IPad</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-3">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="devices[]" value="1" class="adv_ch" id="de_4">
+                                <label for="de_4" class="none">
+                                    <span>IPhone</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="checkbox" name="devices[]" value="1" class="adv_ch" id="de_5">
+                                <label for="de_5" class="none">
+                                    <span>Другие мобильные</span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox b-form-wrapper-checkbox__type-2 col-md-12 clearfix">
+
+                    <label for="browsers" class="el-label-form">
+                        Оплата за <span>*</span>
+                    </label>
+
+                    <div class="b-wrapper-column-checkbox clearfix">
+
+                        <div class="b-column-radio col-md-2 col-xs-6">
+
+                            <div class="b-column-radio">
+                                <input name="tariff_type" id="radio_1" type="radio" value="1" class="adv_ch" onclick="document.getElementById('tariff_type_text').innerHTML = 'Цена за <b>1000</b> показов (CPM)';" checked >
+                                <label for="radio_1" class="none">
+                                    <span>Показы</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="b-column-radio col-md-3 col-xs-6">
+
+                            <div class="b-column-radio">
+                                <input name="tariff_type" id="radio_2" type="radio" value="1" class="adv_ch" onclick="document.getElementById('tariff_type_text').innerHTML = 'Цена за <b>один</b> клик';" checked>
+                                <label for="radio_2" class="none">
+                                    <span>Клики</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="b-form-wrapper-line b-form-wrapper-checkbox b-form-wrapper-checkbox__type-3 col-md-12 clearfix">
+
+                    <label for="category" class="el-label-form">
+                        Категории <span>*</span>
+                    </label>
+
+                    <div class="b-wrapper-column-checkbox clearfix">
+                        <div class="b-column-checkbox col-md-12 b-column-checkbox__ttl">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" onkeyup="setPrior(this)" maxlength="6" name="prior_main">
+                                <input type="checkbox" name="cat_ch[]" value="1" class="adv_ch" id="checkbox_02" name="set" onclick="setChecked(this)">
+                                <label for="checkbox_02" class="none">
+                                    <span id="ch_text">Отметить</span><span>все</span>
+                                </label>
+                            </div>
+                            <div class="col-xs-12">
+                                <span id="tariff_type_text">Цена за <b>один</b> клик</span>
+                            </div>
+                        </div>
+
+
+                        <div class="b-column-checkbox col-md-5">
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior7" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="7" class="adv_ch" id="cat_ch_7">
+                                <label for="cat_ch_7" class="none">
+                                    <span>Женские</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior9" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="9" class="adv_ch" id="cat_ch_9">
+                                <label for="cat_ch_9" class="none">
+                                    <span>Игры</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior41" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="41" class="adv_ch" id="cat_ch_41">
+                                <label for="cat_ch_41" class="none">
+                                    <span>Игры (премиум)</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior10" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="10" class="adv_ch" id="cat_ch_10">
+                                <label for="cat_ch_10" class="none">
+                                    <span>Кино</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior1" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="1" class="adv_ch" id="cat_ch_1">
+                                <label for="cat_ch_1" class="none">
+                                    <span>Кино (премиум)</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior13" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="13" class="adv_ch" id="cat_ch_13">
+                                <label for="cat_ch_13" class="none">
+                                    <span>Литература</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior15" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="15" class="adv_ch" id="cat_ch_15">
+                                <label for="cat_ch_15" class="none">
+                                    <span>Музыка</span>
+                                </label>
+                            </div>
+
+                        </div>
+
+                        <div class="b-column-checkbox col-md-5">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior16" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="16" class="adv_ch" id="cat_ch_16">
+                                <label for="cat_ch_16" class="none">
+                                    <span>Наука и техника</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior19" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="19" class="adv_ch" id="cat_ch_19">
+                                <label for="cat_ch_19" class="none">
+                                    <span>Новости и СМИ</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior20" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="20" class="adv_ch" id="cat_ch_20">
+                                <label for="cat_ch_20" class="none">
+                                    <span>Обучение</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior42" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="42" class="adv_ch" id="cat_ch_42">
+                                <label for="cat_ch_42" class="none">
+                                    <span>Плагин</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior23" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="23" class="adv_ch" id="cat_ch_23">
+                                <label for="cat_ch_23" class="none">
+                                    <span>Плеер</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior46" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="46" class="adv_ch" id="cat_ch_46">
+                                <label for="cat_ch_46" class="none">
+                                    <span>Прочее</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior27" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="27" class="adv_ch" id="cat_ch_27">
+                                <label for="cat_ch_27" class="none">
+                                    <span>Развлечения</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="b-column-checkbox col-md-5">
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior30" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="27" class="adv_ch" id="cat_ch_30">
+                                <label for="cat_ch_30" class="none">
+                                    <span>Софт</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior8" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="8" class="adv_ch" id="cat_ch_8">
+                                <label for="cat_ch_8" class="none">
+                                    <span>Соцсети и общение</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior8" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="31" class="adv_ch" id="cat_ch_31">
+                                <label for="cat_ch_31" class="none">
+                                    <span>Спорт</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior8" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="44" class="adv_ch" id="cat_ch_44">
+                                <label for="cat_ch_44" class="none">
+                                    <span>Только ретаргетинг</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior37" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="37" class="adv_ch" id="cat_ch_37">
+                                <label for="cat_ch_37" class="none">
+                                    <span>Торрент-трекеры</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior38" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="38" class="adv_ch" id="cat_ch_38">
+                                <label for="cat_ch_38" class="none">
+                                    <span>Файлообменники</span>
+                                </label>
+                            </div>
+
+                            <div class="b-line-wrapper-checkbox">
+                                <input type="text" name="prior39" maxlength="6">
+                                <input type="checkbox" name="cat_ch[]" value="38" class="adv_ch" id="cat_ch_39">
+                                <label for="cat_ch_39" class="none">
+                                    <span>Фото, Картинки</span>
+                                </label>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+
+                <div class="b-form-text-line col-md-12 clearfix">
+                    <p><span class="">*</span> - Обязательные к заполнению поля</p>
+                </div>
+
+
+                <div class="b-form-captcha col-md-12 clearfix">
+                    <div class="b-form-captcha__wrapper">
+                        <div class="b-form-captcha__ttl">
+                            <b>Код безопасности <span>*</span>:</b>
+                        </div>
+                        <div class="b-form-captcha__image">
+                            <img src="http://adforce.team/captcha/?mode=2" alt="">
+                        </div>
+                        <div class="b-form-captcha__footer clearfix">
+                            <div class="wrapper-input">
+                                <input type="text" name="captcha" id="keystring">
+                            </div>
+                            <input name="contactus" type="submit" class="signup btn-submit-form" id="contactus" value="Готово" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+</section>
+
+<!---------------FOOTER--------------------------------------------->
+
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png" alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive" >
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                    © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

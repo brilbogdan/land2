@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AdFORCE - Добавить блок</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-select.min.css">
+    <link rel="stylesheet" href="css/style.css" sc>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/bootstrap-select.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+<body>
+
+<!---------------HEADER--------------------------------------------->
+<header class="b-header" id="b-header">
+
+    <div class="b-header-top">
+        <div class="b-header-flex container">
+
+            <a href="#" class="el-header-logo fll">
+                <img src="images/adforce-logo.png" alt="" class="img-responsive">
+            </a>
+
+            <div class="b-header-btn clearfix flr">
+                <a href="#" class="btn-balance">Баланс</a>
+                <a href="#" class="btn-menu">Меню</a>
+            </div>
+
+            <div class="bl-header-info flr">
+
+                <div class="b-manager-info fll clearfix">
+                    <div class="b-manager-info__ava fll">
+                        <img src="images/del/ava.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="b-manager-info__contacts flr">
+                        <div class="el-manager-info__txt">
+                            Ваш менеджер: <span>Александр</span>
+                        </div>
+                        <a href="skype:smirnov.adforce">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-skype.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                smirnov.adforce
+                            </span>
+                        </a>
+                        <a href="mailto:alexandr.smirnov@adforce.team">
+                            <span class="icon dib vam">
+                                <img src="images/sprite/ic-mail.png" alt="">
+                            </span>
+                            <span class="txt dib vam">
+                                alexandr.smirnov@adforce.team
+                            </span>
+                        </a>
+                    </div>
+
+                </div>
+
+                <div class="b-balance-info flr clearfix">
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Логин:
+                        </div>
+                        <div class="flr">
+                            adv@test.ru
+                        </div>
+
+                    </div>
+
+                    <div class="b-balance-info__line clearfix">
+
+                        <div class="fll">
+                            Баланс:
+                        </div>
+                        <div class="flr">
+                            100
+                            <span class="rouble">p</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="b-header-menu">
+
+        <div class="container">
+            <nav class="b-main-menu">
+                <ul>
+                    <li>
+                        <a href="#" class="el-submenu">clickunder</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">imessage</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">banner</a>
+                        <ul class="sub-menu">
+                            <li><a href="add-page.html">Добавить</a></li>
+                            <li><a href="list-page.html">Список</a></li>
+                            <li><a href="chart-page.html">Статистика по дням</a></li>
+                            <li><a href="chart-page.html">Статистика по кампаниям </a></li>
+                            <li><a href="chart-page.html">Статистика по площадкам</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="el-submenu">Инструменты</a>
+                        <ul class="sub-menu">
+                            <li><a href="tracker-page.html">Tracker</a></li>
+                            <li><a href="retargeting-page.html">Retargeting</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="finance-page.html">Финансы</a></li>
+                    <li><a href="faq-page.html">FAQ</a></li>
+                    <li><a href="edit-page.html">Профиль</a></li>
+                </ul>
+            </nav>
+        </div>
+
+
+    </div>
+
+</header>
+
+
+<!---------------CONTENT--------------------------------------------->
+<section class="b-main-section clearfix">
+
+    <div class="container clearfix">
+        <h1 class="ttl-page">Кампании:</h1>
+
+        <form class="clearfix">
+            <div class="row clearfix">
+                <div class="col-md-2 col-xs-6 b-wrapper-select-list b-wrapper-select-list__all">
+                    <select onchange="location.href=this.value;">
+                        <option value="?user=advert&page=banner&s=3">Все</option>
+                        <option value="?user=advert&page=banner&s=3&d=5">628x90</option>
+                        <option value="?user=advert&page=banner&s=3&d=4">500x250</option>
+                        <option value="?user=advert&page=banner&s=3&d=11">300x250</option>
+                        <option value="?user=advert&page=banner&s=3&d=2">240x400</option>
+                        <option value="?user=advert&page=banner&s=3&d=1">120x600</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2 col-xs-6 b-wrapper-select-list b-wrapper-select-list__blocked">
+                    <select onchange="location.href=this.value;">
+                        <option value="?user=advert&page=banner&s=1&d=">Активные</option>
+                        <option value="?user=advert&page=banner&s=2&d=">На паузе</option>
+                        <option value="?user=advert&page=banner&s=4&d=">На модерации</option>
+                        <option value="?user=advert&page=banner&s=3&d=" selected>Заблокированные</option>
+                    </select>
+                </div>
+            </div>
+
+        </form>
+
+        <div class="wrapper-scroll-info">
+            <div class="el-scroll-info">
+
+            </div>
+        </div>
+
+        <div class="wrapper-table fll">
+            <table class="b-table b-table__company b-table__border">
+                <thead>
+                <tr class="b-table__header">
+                    <th><div>ID</div></th>
+                    <th><div>Кампания</div></th>
+                    <th><div>Лимиты</div></th>
+                    <th><div>Время</div></th>
+                    <th><div>Гео</div></th>
+                    <th><div>Уник-ть</div></th>
+                    <th><div>Управление</div></th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>
+                        27608
+                    </td>
+                    <td>
+
+                        <a href="http://test1411.ru" target="_blank">Browser</a>
+
+                        <a href="#" target="_blank">
+                            <img src="images/del/banner.gif" border="0"  class="img-responsive">
+                        </a>
+
+                    </td>
+                    <td>
+                        <div class="col-xs-12">
+                            <div class="col-xs-6">
+                                Показы:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                            <div class="col-xs-6">
+                                Клики:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                            <div class="col-xs-6">
+                                Лиды:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        0:00 - 24:00
+                    </td>
+                    <td class="b-table__column-geo">
+                        <div class="col-xs-12">
+                            <b>Россия:</b> Москва
+                        </div>
+                        <div class="col-xs-12">
+                            <b>Россия:</b> Все города
+                        </div>
+                        <div class="col-xs-12">
+                            <b>Беларуссия:</b> Все города
+                        </div>
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td class="">
+                        <div id="status_27608" onclick="change_status(27608, 3)" style="cursor: pointer;" class="btn-status">
+                            <img src="images/moderation.png" title="Заблокирована" border="0">
+                        </div>
+                        <a href="?user=advert&page=banner&action=day_stat&id=27608" class="btn-status">
+                            <img src="images/stat.png" border="0" title="Статистика">
+                        </a>
+                        <a href="?user=advert&page=banner&action=edit&id=27608" class="btn-status">
+                            <img src="images/edit.png" border="0" title="Редактирование">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        27608
+                    </td>
+                    <td>
+
+                        <a href="http://test1411.ru" target="_blank">Browser</a>
+
+                        <a href="#" target="_blank">
+                            <img src="images/del/banner.gif" border="0"  class="img-responsive">
+                        </a>
+
+                    </td>
+                    <td>
+                        <div class="col-xs-12">
+                            <div class="col-xs-6">
+                                Показы:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                            <div class="col-xs-6">
+                                Клики:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                            <div class="col-xs-6">
+                                Лиды:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        0:00 - 24:00
+                    </td>
+                    <td class="b-table__column-geo">
+                        <div class="col-xs-12">
+                            <b>Россия:</b> Москва
+                        </div>
+                        <div class="col-xs-12">
+                            <b>Россия:</b> Все города
+                        </div>
+                        <div class="col-xs-12">
+                            <b>Беларуссия:</b> Все города
+                        </div>
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td class="">
+                        <div id="status_27608" onclick="change_status(27608, 3)" style="cursor: pointer;" class="btn-status">
+                            <img src="images/block.png" title="Заблокирована" border="0">
+                        </div>
+                        <a href="?user=advert&page=banner&action=day_stat&id=27608" class="btn-status">
+                            <img src="images/stat.png" border="0" title="Статистика">
+                        </a>
+                        <a href="?user=advert&page=banner&action=edit&id=27608" class="btn-status">
+                            <img src="images/edit.png" border="0" title="Редактирование">
+                        </a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        27608
+                    </td>
+                    <td>
+
+                        <a href="http://test1411.ru" target="_blank">Browser</a>
+
+                        <a href="#" target="_blank">
+                            <img src="images/del/banner.gif" border="0"  class="img-responsive">
+                        </a>
+
+                    </td>
+                    <td>
+                        <div class="col-xs-12">
+                            <div class="col-xs-6">
+                                Показы:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                            <div class="col-xs-6">
+                                Клики:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                            <div class="col-xs-6">
+                                Лиды:
+                            </div>
+                            <div class="col-xs-6">
+                                ∞
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        0:00 - 24:00
+                    </td>
+                    <td class="b-table__column-geo">
+                        <div class="col-xs-12">
+                            <b>Россия:</b> Москва
+                        </div>
+                        <div class="col-xs-12">
+                            <b>Россия:</b> Все города
+                        </div>
+                        <div class="col-xs-12">
+                            <b>Беларуссия:</b> Все города
+                        </div>
+                    </td>
+                    <td>
+                        1
+                    </td>
+                    <td class="">
+                        <div id="status_27608" onclick="change_status(27608, 3)" style="cursor: pointer;" class="btn-status">
+                            <img src="images/play.png" title="Заблокирована" border="0">
+                        </div>
+                        <a href="?user=advert&page=banner&action=day_stat&id=27608" class="btn-status">
+                            <img src="images/stat.png" border="0" title="Статистика">
+                        </a>
+                        <a href="?user=advert&page=banner&action=edit&id=27608" class="btn-status">
+                            <img src="images/edit.png" border="0" title="Редактирование">
+                        </a>
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!---------------FOOTER--------------------------------------------->
+<footer class="b-footer">
+    <div class="container">
+        <div class="b-footer-flex">
+            <div class="b-footer__webmoney">
+                <a href="https://passport.webmoney.ru/asp/certview.asp?wmid=297697115191" target="_blank">
+                    <img src="images/ic-webmoney.png" alt="Здесь находится аттестат нашего WM идентификатора 297697115191" class="img-responsive" >
+                </a>
+                <a href="http://www.megastock.ru/" target="_blank">
+                    <img src="images/ic-webmoney-2.png" alt="www.megastock.ru" class="img-responsive">
+                </a>
+            </div>
+
+            <div class="b-footer-copy">
+                <noindex>
+                         © <b><a href=http://adforce.ru" rel="nofollow">AdForce.team</a></b>, 2017
+                </noindex>
+            </div>
+
+            <div class="b-footer-nav">
+                <nav>
+                    <ul>
+                        <li><a href="news-page.html">Новости</a></li>
+                        <li><a href="rule-page.html">Правила</a></li>
+                        <li><a href="faq-page.html">FAQ</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+</body>
+</html>
